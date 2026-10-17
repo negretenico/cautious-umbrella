@@ -19,6 +19,9 @@
     <Filter Include="Source Files\Display">
       <UniqueIdentifier>{09a58322-b600-458c-bea6-80ab2d226cd7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ApplicationRunner">
+      <UniqueIdentifier>{129e950c-681f-4aa4-96ee-6995ef97b683}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CautiousUmbrella.cpp">
@@ -35,6 +38,12 @@
     </ClCompile>
     <ClCompile Include="Display.cpp">
       <Filter>Source Files\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationRunner.ixx">
+      <Filter>Source Files\ApplicationRunner</Filter>
+    </ClCompile>
+    <ClCompile Include="ApplicationRunner.cpp">
+      <Filter>Source Files\ApplicationRunner</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

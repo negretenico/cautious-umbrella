@@ -141,6 +141,8 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ApplicationRunner.cpp" />
+    <ClCompile Include="ApplicationRunner.ixx" />
     <ClCompile Include="Atomicity.cpp" />
     <ClCompile Include="Atomicity.ixx" />
     <ClCompile Include="CautiousUmbrella.cpp" />

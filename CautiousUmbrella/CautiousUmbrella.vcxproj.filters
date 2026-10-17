@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Atomicity">
       <UniqueIdentifier>{a9e0448c-60e1-4739-bc18-107cfd258fb7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Display">
+      <UniqueIdentifier>{09a58322-b600-458c-bea6-80ab2d226cd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CautiousUmbrella.cpp">
@@ -26,6 +29,12 @@
     </ClCompile>
     <ClCompile Include="Atomicity.cpp">
       <Filter>Source Files\Atomicity</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.ixx">
+      <Filter>Source Files\Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Display.cpp">
+      <Filter>Source Files\Display</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

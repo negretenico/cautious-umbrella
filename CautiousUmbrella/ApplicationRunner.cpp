@@ -2,6 +2,7 @@ module ApplicationRunner;
 import Paging;
 import Atomicity;
 import Display;
+import FalseSharing;
 import std;
 //TODO: our applicaiton runner should just be a thin orcherstaor from the command line
 //TODO: we shoudl create instatsions of each print result instead of havin this cpp know about the how they 
@@ -50,4 +51,16 @@ void ApplicationRunner::printPagingResults() {
 	Display::printSeperator();
 	std::println("");
 	Paging::triggerOOM();
+}
+
+void ApplicationRunner::printFalseShardBenchmarkResults() {
+	Display::printHeader();
+	std::println("  :: FalseSharing Benchmarks ::");
+	std::println("");
+	Display::printSeperator();
+	auto start = std::chrono::steady_clock::now();
+	FalseSharing::runFalseSharingBenchmark();
+	auto end = std::chrono::steady_clock::now();
+	auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+	std::println("  :: FalseSharing            ::     {}", elapsed.count());
 }

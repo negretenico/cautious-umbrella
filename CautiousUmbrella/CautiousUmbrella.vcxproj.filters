@@ -25,6 +25,9 @@
     <Filter Include="Source Files\Paging">
       <UniqueIdentifier>{e67b1b88-dda4-4622-b783-9c0398aa81d8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\FalseSharing">
+      <UniqueIdentifier>{43696255-7675-4a67-afa5-f628a004dd40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CautiousUmbrella.cpp">
@@ -53,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="Paging.cpp">
       <Filter>Source Files\Paging</Filter>
+    </ClCompile>
+    <ClCompile Include="FalseSharing.ixx">
+      <Filter>Source Files\FalseSharing</Filter>
+    </ClCompile>
+    <ClCompile Include="FalseSharing.cpp">
+      <Filter>Source Files\FalseSharing</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

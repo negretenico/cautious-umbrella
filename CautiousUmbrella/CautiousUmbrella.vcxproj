@@ -148,6 +148,8 @@
     <ClCompile Include="CautiousUmbrella.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Display.ixx" />
+    <ClCompile Include="FalseSharing.cpp" />
+    <ClCompile Include="FalseSharing.ixx" />
     <ClCompile Include="Paging.cpp" />
     <ClCompile Include="Paging.ixx" />
   </ItemGroup>

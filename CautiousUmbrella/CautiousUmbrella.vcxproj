@@ -141,11 +141,15 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ApplicationRunner.cpp" />
+    <ClCompile Include="ApplicationRunner.ixx" />
     <ClCompile Include="Atomicity.cpp" />
     <ClCompile Include="Atomicity.ixx" />
     <ClCompile Include="CautiousUmbrella.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Display.ixx" />
+    <ClCompile Include="Paging.cpp" />
+    <ClCompile Include="Paging.ixx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

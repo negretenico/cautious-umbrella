@@ -4,6 +4,7 @@ import ApplicationRunner;
 
 int main()
 {
-	ApplicationRunner::printAtomicityResults();
+	//ApplicationRunner::printAtomicityResults();
+	ApplicationRunner::printPagingResults();
 	return 0;
 }

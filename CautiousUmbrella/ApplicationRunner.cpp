@@ -58,9 +58,20 @@ void ApplicationRunner::printFalseShardBenchmarkResults() {
 	std::println("  :: FalseSharing Benchmarks ::");
 	std::println("");
 	Display::printSeperator();
-	auto start = std::chrono::steady_clock::now();
-	FalseSharing::runFalseSharingBenchmark();
-	auto end = std::chrono::steady_clock::now();
-	auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
-	std::println("  :: FalseSharing            ::     {}", elapsed.count());
+	std::println("  :: SizeOfNormalStruct {}      SizeOfPaddedStruct {}", sizeof(FalseSharing::Hero), sizeof(FalseSharing::HeroWithPadding));
+
+	auto timeit = [](auto&& callback) {
+		auto start = std::chrono::steady_clock::now();
+		callback();
+		auto end = std::chrono::steady_clock::now();
+		auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
+		return elapsed.count();
+		};
+	auto withFalseSharing = timeit(FalseSharing::runFalseSharingBenchmark);
+	std::println("  :: FalseSharing                       ::     {}", withFalseSharing);
+	auto withoutFalseSharingDueToPadding = timeit(FalseSharing::runFalseSharingBenchmarkWithPadding);
+	std::println("  :: FalseSharingWithPadding            ::     {}", withoutFalseSharingDueToPadding);
+	auto withoutFalseSharingThreadLocal = timeit(FalseSharing::runFalseSharingBenchmarkWithThreadLocal);
+	std::println("  :: FalseSharingThreadLocal            ::     {}", withoutFalseSharingThreadLocal);
+
 }

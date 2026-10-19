@@ -5,4 +5,5 @@ export namespace ApplicationRunner {
 	void printPagingResults();
 	void printFalseShardBenchmarkResults();
 	void printSchedulingSimulationResults();
+	void printMemoryOrderingResults();
 }

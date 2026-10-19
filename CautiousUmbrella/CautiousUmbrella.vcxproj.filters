@@ -31,6 +31,9 @@
     <Filter Include="Source Files\Scheduling">
       <UniqueIdentifier>{678b55f8-3e67-4ba5-9599-c46d427f0735}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Reordering">
+      <UniqueIdentifier>{5692f9f6-3008-47a7-834a-cc4732543b24}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CautiousUmbrella.cpp">
@@ -71,6 +74,12 @@
     </ClCompile>
     <ClCompile Include="Scheduling.cpp">
       <Filter>Source Files\Scheduling</Filter>
+    </ClCompile>
+    <ClCompile Include="Reordering.ixx">
+      <Filter>Source Files\Reordering</Filter>
+    </ClCompile>
+    <ClCompile Include="Reording.cpp">
+      <Filter>Source Files\Reordering</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

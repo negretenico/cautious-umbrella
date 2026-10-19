@@ -28,6 +28,9 @@
     <Filter Include="Source Files\FalseSharing">
       <UniqueIdentifier>{43696255-7675-4a67-afa5-f628a004dd40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Scheduling">
+      <UniqueIdentifier>{678b55f8-3e67-4ba5-9599-c46d427f0735}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CautiousUmbrella.cpp">
@@ -62,6 +65,12 @@
     </ClCompile>
     <ClCompile Include="FalseSharing.cpp">
       <Filter>Source Files\FalseSharing</Filter>
+    </ClCompile>
+    <ClCompile Include="Scheduling.ixx">
+      <Filter>Source Files\Scheduling</Filter>
+    </ClCompile>
+    <ClCompile Include="Scheduling.cpp">
+      <Filter>Source Files\Scheduling</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

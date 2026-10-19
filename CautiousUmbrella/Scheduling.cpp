@@ -23,12 +23,12 @@ void Scheduling::pinAllThreads() {
 
 	bool didWePinOurThreads = SetProcessAffinityMask(GetCurrentProcess(), 1);
 	if (!didWePinOurThreads) {
-		std::logic_error("We could not pin our threads");
+		throw std::logic_error("We could not pin our threads");
 	}
 	std::println("Successfuly pinned process and child threads to core 0");
 	bool didWeElevateOurProcessPriority = SetPriorityClass(GetCurrentProcess(), REALTIME_PRIORITY_CLASS);
 	if (!didWeElevateOurProcessPriority) {
-		std::logic_error("We could not elevate our priority");
+		throw std::logic_error("We could not elevate our priority");
 	}
 	std::println("Successfuly elevated proces priority");
 }

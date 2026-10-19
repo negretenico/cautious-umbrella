@@ -27,7 +27,7 @@ Paging::PointerUnsignedLongLong Paging::getTotalPhysicalRAM() {
 void Paging::allocateMemoryPerPage() {
 	auto totalRAM = getTotalPhysicalRAM();
 	//Note: memory is installed in GB, but this API returns the value in KB
-	auto amountToAllocate = (*totalRAM) * 4; // 4x RAM
+	auto amountToAllocate = (*totalRAM) * 4 * 1000; // 4x RAM
 	auto pageSize = 4096; // 4 KB pages
 	auto numPages = amountToAllocate / pageSize;
 	std::println("Attempting to allocate {} bytes ({} pages of {} bytes each)", amountToAllocate, numPages, pageSize);

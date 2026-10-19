@@ -152,6 +152,8 @@
     <ClCompile Include="FalseSharing.ixx" />
     <ClCompile Include="Paging.cpp" />
     <ClCompile Include="Paging.ixx" />
+    <ClCompile Include="Scheduling.cpp" />
+    <ClCompile Include="Scheduling.ixx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

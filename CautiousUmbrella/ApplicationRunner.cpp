@@ -3,6 +3,7 @@ import Paging;
 import Atomicity;
 import Display;
 import FalseSharing;
+import Scheduling;
 import std;
 //TODO: our applicaiton runner should just be a thin orcherstaor from the command line
 //TODO: we shoudl create instatsions of each print result instead of havin this cpp know about the how they 
@@ -74,4 +75,18 @@ void ApplicationRunner::printFalseShardBenchmarkResults() {
 	auto withoutFalseSharingThreadLocal = timeit(FalseSharing::runFalseSharingBenchmarkWithThreadLocal);
 	std::println("  :: FalseSharingThreadLocal            ::     {}", withoutFalseSharingThreadLocal);
 
+}
+
+void ApplicationRunner::printSchedulingSimulationResults() {
+	Display::printHeader();
+	std::println("  :: Scheudling Simulation ::");
+	std::println("");
+	Display::printSeperator();
+	Scheduling::pinAllThreads();
+	Display::printSeperator();
+	std::println("   :: Spawning Threads ::");
+	Scheduling::spawnThreadsWithTheirPrioritySet();
+	Display::printSeperator();
+	std::println("   :: Starting Simulation ::");
+	Scheduling::runSimulation();
 }

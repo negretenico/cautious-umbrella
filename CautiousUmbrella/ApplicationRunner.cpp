@@ -2,6 +2,7 @@ module ApplicationRunner;
 import Paging;
 import Atomicity;
 import Display;
+import Reordering;
 import FalseSharing;
 import Scheduling;
 import std;
@@ -89,4 +90,16 @@ void ApplicationRunner::printSchedulingSimulationResults() {
 	Display::printSeperator();
 	std::println("   :: Starting Simulation ::");
 	Scheduling::runSimulation();
+}
+
+void ApplicationRunner::printMemoryOrderingResults() {
+	Display::printHeader();
+	std::println("  :: Reordering Simulation ::");
+	std::println("");
+	Display::printSeperator();
+	int numOfTimesWeSawStaleDataWithoutProperOrdering = Reordering::withoutProperMemoryOrdering();
+	std::println("  :: Reording Relaxed       ::     {}", numOfTimesWeSawStaleDataWithoutProperOrdering);
+	int numOfTimesWeSawStaleDataWithProperOrdering = Reordering::withProperMemoryOrdering();
+	std::println("  :: Reording Rel\\Acqu     ::     {}", numOfTimesWeSawStaleDataWithProperOrdering);
+
 }

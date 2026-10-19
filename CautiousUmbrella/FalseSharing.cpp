@@ -45,7 +45,7 @@ void updatePlayerMovementSpeedDelta(T& player) {
 }
 
 void FalseSharing::runFalseSharingBenchmark() {
-	for (auto i = 0; i < 3; i++) {
+	for (auto i = 0; i < 4; i++) {
 		threads[i] = std::jthread([i]() {
 			for (auto current_iteration = 0; current_iteration < FalseSharing::NUM_OF_THREAD_ITERATIONS; current_iteration++) {
 				switch (i) {
@@ -68,7 +68,7 @@ void FalseSharing::runFalseSharingBenchmark() {
 }
 
 void FalseSharing::runFalseSharingBenchmarkWithPadding() {
-	for (auto i = 0; i < 3; i++) {
+	for (auto i = 0; i < 4; i++) {
 		threads[i] = std::jthread([i]() {
 			for (auto current_iteration = 0; current_iteration < FalseSharing::NUM_OF_THREAD_ITERATIONS; current_iteration++) {
 				switch (i) {
@@ -95,7 +95,7 @@ void FalseSharing::runFalseSharingBenchmarkWithThreadLocal() {
 	* this mutex is only alive as long as the main thread is alive
 	*/
 	static std::mutex m;
-	for (auto i = 0; i < 3; i++) {
+	for (auto i = 0; i < 4; i++) {
 		threads[i] = std::jthread([i]() {
 			/*
 			 * Note: While this eliminates false sharing via Thread-Local Storage (TLS) isolation,
